@@ -1,0 +1,23 @@
+diff --git a/node_modules/@nestjs-modules/mailer/dist/adapters/handlebars.adapter.js b/node_modules/@nestjs-modules/mailer/dist/adapters/handlebars.adapter.js
+index b42eee5..76a76c1 100644
+--- a/node_modules/@nestjs-modules/mailer/dist/adapters/handlebars.adapter.js
++++ b/node_modules/@nestjs-modules/mailer/dist/adapters/handlebars.adapter.js
+@@ -29,6 +29,7 @@ class HandlebarsAdapter {
+                 ? path.dirname(template)
+                 : path.join((0, lodash_1.get)(options, 'dir', ''), path.dirname(template));
+             const templatePath = path.join(templateDir, templateName + templateExt);
++            
+             if (!this.precompiledTemplates[templateName]) {
+                 try {
+                     const template = fs.readFileSync(templatePath, 'utf-8');
+@@ -51,7 +52,9 @@ class HandlebarsAdapter {
+             data: {},
+         });
+         if (runtimeOptions.partials) {
+-            const files = glob.sync(path.join(runtimeOptions.partials.dir, '**', '*.hbs'));
++            const partialPath=path.join(runtimeOptions.partials.dir, '**', '*.hbs').replace(/\\/g,'/');
++            
++            const files = glob.sync(partialPath);
+             files.forEach((file) => {
+                 const { templateName, templatePath } = precompile(file, () => { }, runtimeOptions.partials);
+                 const templateDir = path.relative(runtimeOptions.partials.dir, path.dirname(templatePath));

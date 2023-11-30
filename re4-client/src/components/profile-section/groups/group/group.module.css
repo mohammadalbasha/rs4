@@ -1,0 +1,12 @@
+.toolkit {
+  cursor: pointer;
+  padding: 0.5rem 2rem;
+  transition: 0.2s all ease-in-out;
+  background-color: rgb(246, 246, 246);
+  color: black;
+  font-weight: 900;
+}
+.toolkit:hover {
+  background-color: rgb(205, 205, 205);
+  opacity: 1;
+}

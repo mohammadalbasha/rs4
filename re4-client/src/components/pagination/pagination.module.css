@@ -1,0 +1,44 @@
+.attentionsItems__count {
+  display: flex;
+  justify-content: flex-end;
+  margin: 3px;
+}
+
+.attentionsItems__count__span {
+  background-color: #f0eeee;
+  color: #666;
+  border: 1px solid #aeadad;
+  padding: 4px 6px;
+  font-size: 0.8rem;
+}
+
+.attentionsItems__count__select {
+  padding: 4px;
+  font-size: 0.8rem;
+  width: 3rem;
+  background-color: white;
+  color: #2d2c2c;
+}
+
+.attentionsItems__pagination__list {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.attentionsItems__pagination__list__item {
+  background-color: #f0eeee;
+  color: #9b9a9a;
+  border: 1px solid #aeadad;
+  padding: 2px 6px;
+  font-size: 1rem;
+}
+
+.attentionsItems__pagination__list__item__active {
+  background-color: white;
+  color: #66c;
+  cursor: pointer;
+}
+.attentionsItems__pagination__list__item__active:hover {
+  background-color: #f0eeee;
+}

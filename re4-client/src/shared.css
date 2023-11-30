@@ -1,0 +1,28 @@
+.tableItems {
+  border-collapse: collapse;
+  width: 100%;
+  opacity: inherit;
+}
+
+th,
+td {
+  text-align: right;
+  padding: 4px;
+  border-width: 1px;
+  border-color: rgb(196, 196, 197);
+  border-style: inset;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+tr:nth-child(odd):hover {
+  background-color: #f2f2f2;
+}
+
+th {
+  color: rgb(100, 98, 98);
+}
+td {
+  color: #6b6b6b;
+}

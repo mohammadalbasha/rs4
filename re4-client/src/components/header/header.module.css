@@ -1,0 +1,38 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #5a5a5d;
+  background-color: #f5f5f5;
+  /* position: fixed; */
+  top: 0;
+
+  width: 100%;
+  z-index: 100;
+  height: 2.5rem;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+
+}
+
+.translateX {
+  transform: translateX(256px);
+}
+
+
+.logout {
+  padding: 1rem 2rem;
+  background-color: #6666c9;
+  color: #f5f5f5;
+  cursor: pointer;
+}
+.logout:hover {
+  background-color: #7979d2;
+}
+
+.helloSupport {
+  margin-left: 1rem;
+}
+.App-logo-image {
+  height: 100%;
+}

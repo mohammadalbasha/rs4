@@ -1,0 +1,337 @@
+/* @import url("https://fonts.googleapis.com/icon?family=Material+Icons"); */
+.appBarContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 6rem;
+  background-color: white;
+  transition: transform 0.3s ease;
+}
+.appBar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  /* Rest of the styles */
+}
+
+.translateX {
+  transform: translateX(256px);
+}
+.backdrop {
+  opacity: 0.5;
+  background-color: black;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  height: 100vh;
+  width: 100vw;
+  transition:
+    opacity 0.3s ease-out,
+    z-index 0.1s ease-out;
+}
+
+.logoContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.logo {
+  width: 200px;
+}
+.appBarNavContainer {
+  display: none;
+}
+.appBarNav {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  font-size: 1rem;
+  font-weight: 400;
+}
+li {
+  position: relative;
+}
+.navItem {
+  padding: 2.2rem;
+  color: #0f231c;
+}
+.navItem:hover {
+  color: #51b792;
+  cursor: pointer;
+}
+
+.selectedTab {
+  color: #51b792;
+}
+.selectedTab:hover {
+  color: #0f231c;
+}
+
+.navItem__profile {
+  position: relative;
+}
+.navItem__profile__span {
+  margin: 0.2rem;
+  vertical-align: middle;
+}
+.navItem__profile__dropdown {
+  color: #000;
+  display: none;
+  position: absolute;
+  top: 80px;
+  min-width: 160px;
+  background-color: white;
+  box-shadow: 2px 8px 16px 0px rgba(212, 196, 196, 0.2);
+  text-align: right;
+  z-index: 1;
+}
+
+.navItem__profile:hover .navItem__profile__dropdown {
+  display: block;
+}
+.navItem__profile__dropdown__link {
+  color: #5a5a5d;
+  display: block;
+  text-align: right;
+  font-size: 1rem;
+  text-decoration: none;
+  width: 100%;
+  padding: 12px 16px;
+}
+.navItem__profile__dropdown__link:hover {
+  background-color: #f5f5f5;
+}
+
+.selectedLink {
+  color: #6666c9;
+  background-color: #f5f5f5;
+}
+
+.navItem__profile__a {
+}
+.navItem__profile__a::after {
+  position: absolute;
+  content: '';
+  height: 2px;
+  bottom: 1.8rem;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 0;
+  background: #560021;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.navItem__profile:hover .navItem__profile__a::after {
+  width: 80%;
+}
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+.navItem__day {
+  position: relative;
+}
+.navItem__day__span {
+  margin: 0.1rem;
+  vertical-align: middle;
+}
+.navItem__day__dropdown {
+  display: none;
+  position: absolute;
+  top: 80px;
+  min-width: 160px;
+  color: #000;
+  background-color: white;
+  box-shadow: 2px 8px 16px 0px rgba(212, 196, 196, 0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.navItem__day:hover .navItem__day__dropdown {
+  display: block;
+}
+
+.navItem__day__a::after {
+  position: absolute;
+  content: '';
+  height: 2px;
+  bottom: 1.8rem;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 0;
+  background: #560021;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.navItem__day:hover .navItem__day__a::after {
+  width: 80%;
+}
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+.navItem__qr {
+  position: relative;
+}
+.navItem__qr__span {
+  margin: 0.1rem;
+  vertical-align: middle;
+}
+
+.navItem__qr__a::after {
+  position: absolute;
+  content: '';
+  height: 2px;
+  bottom: 1.8rem;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 0;
+  background: #560021;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.navItem__qr:hover .navItem__qr__a::after {
+  width: 80%;
+}
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+.hamburger {
+  display: block;
+  width: 24px;
+  height: 20px;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #000;
+  margin-bottom: 4px;
+  /* Add styles for the lines in the hamburger icon */
+  /* ... */
+}
+
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+  .appBarNavContainer {
+    width: 50%;
+    display: flex;
+    justify-content: right;
+  }
+  .logoContainer {
+    width: 50%;
+  }
+  .logo {
+    width: 300px;
+  }
+}
+
+.sideNav {
+  /* Additional styles for the side navigation */
+  /* ... */
+  background-color: white;
+  transform: translateX(-100%);
+  width: 256px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 3;
+  transition: transform 0.3s ease;
+}
+.sideNav::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -10px; /* Adjust the distance based on your preference */
+  bottom: 0;
+  width: 10px; /* Adjust the width of the shadow based on your preference */
+  box-shadow: -5px 0 5px rgba(69, 70, 69, 0.6); /* Reversed (right) box shadow */
+}
+
+.sideNavActive {
+  /* Additional styles when the side navigation is active */
+  /* ... */
+  transform: translateX(0);
+}
+
+.Right-side {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 20vw;
+  height: 100vh;
+  margin-top: 3rem;
+  background-color: rgb(25, 88, 88);
+}
+
+.sideNav__items {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  list-style: none;
+  color: rgb(248, 247, 247);
+  overflow: hidden;
+}
+
+.sidNav__items__item {
+  padding: 2rem;
+}
+
+.navItem__profile__sideDrawer {
+  color: #000;
+  transform: translateX(100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  box-shadow: 2px 8px 16px 0px rgba(212, 196, 196, 0.2);
+  text-align: right;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.navItem__profile__sideDrawer__active {
+  /* Additional styles when the side navigation is active */
+  /* ... */
+  transform: translateX(0);
+}
+
+.mainContent {
+  margin-left: 0;
+  transition: margin-left 0.3s ease;
+  /* Rest of the styles */
+}

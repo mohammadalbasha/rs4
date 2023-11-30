@@ -1,0 +1,78 @@
+.confirmAttention {
+  display: block;
+  margin: auto;
+}
+
+.header {
+  text-align: right;
+  height: 3rem;
+  padding: 2rem;
+  color: rgb(158, 158, 166);
+}
+.header__add {
+  color: #66c;
+  vertical-align: middle;
+}
+.header__add:hover {
+  cursor: pointer;
+  color: rgb(74, 74, 76);
+}
+.header__span {
+  vertical-align: middle;
+  color: rgb(74, 74, 76);
+}
+
+.content {
+  padding: 1rem;
+}
+
+@media (min-width: 756px) {
+  .confirmAttention {
+    width: 75vw;
+  }
+}
+
+.content__heading {
+  color: white;
+  background: #66c;
+  padding: 15px 5px;
+  text-align: center;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.add__fieldsItems {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 748px) {
+  .add__toolkit__search,
+  .add__toolkit__empty {
+    width: 50%;
+  }
+  .add__fieldsItems {
+    flex-direction: row-reverse;
+  }
+}
+
+.content__submitButton {
+  margin-top: 2rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  background-color: hsl(0, 0%, 96%);
+  border-top: 0.1px solid rgb(199, 199, 202);
+}
+
+.content__submitButton__button {
+  margin-right: 1rem;
+  padding: 1rem 2rem;
+  outline: none;
+  border: none;
+  background-color: #66c;
+  color: white;
+}
+.content__submitButton__button:hover {
+  opacity: 0.8;
+}

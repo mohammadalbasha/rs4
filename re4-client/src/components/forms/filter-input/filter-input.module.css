@@ -1,0 +1,32 @@
+.filters__fieldsItems__fieldItem {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  margin: 10px;
+}
+
+.filters__fieldsItems__fieldItem__span {
+  color: #a4a4a4;
+}
+
+.filters__fieldsItems__fieldItem__input {
+  margin-top: 10px;
+  height: 2rem;
+  border: 1px solid #66c;
+  border-radius: 5px;
+}
+
+.filters__fieldsItems__fieldItem__select {
+  background-color: white;
+  border: 1px solid #a4a4a4;
+  text-align: right;
+  color: #767676;
+}
+
+@media (min-width: 748px) {
+  
+
+  .filters__fieldsItems__fieldItem {
+    width: 25%;
+  }
+}

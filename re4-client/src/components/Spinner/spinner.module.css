@@ -1,0 +1,53 @@
+.container {
+  height: 85vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner__image {
+  width: 400px;
+  height: 200px;
+}
+
+.spinner {
+  width: 100px;
+  height: 100px;
+  animation: Morph 2000ms infinite;
+}
+
+@keyframes Morph {
+  0%,
+  100% {
+    border-radius: 50%;
+    transform: rotate(0deg);
+    /* background-color: var(--color-primary-dark); */
+    background-color: rgb(127, 136, 255);
+  }
+  50% {
+    border-radius: 0%;
+    transform: rotate(180deg);
+    background-color: rgb(107, 77, 112);
+  }
+}
+
+/* color: var(--color-primary); */
+
+.error {
+  padding: 3rem 1rem;
+  background-color: red;
+  color: white;
+  width: 100%;
+}
+
+.success {
+  padding: 3rem 1rem;
+  background-color: green;
+  color: white;
+  width: 100%;
+}

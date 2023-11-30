@@ -1,0 +1,90 @@
+.adds__fieldsItems__fieldItem {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  padding: 20px;
+  text-align-last: right;
+}
+
+.adds__fieldsItems__fieldItem__span {
+  color: #a4a4a4;
+}
+
+.adds__fieldsItems__fieldItem__input {
+  margin-top: 10px;
+  height: 2rem;
+  padding: 1rem;
+  border: 1px solid #66c;
+  border-radius: 5px;
+}
+
+.adds__fieldsItems__fieldItem__select {
+  background-color: white;
+  border: 1px solid #a4a4a4;
+  text-align: right;
+  color: #767676;
+}
+
+@media (min-width: 748px) {
+  .w-50 {
+    width: 50%;
+  }
+  .w-25 {
+    width: 25%;
+  }
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1000;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.content__localeButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.content__localeButtons__button {
+  padding: 1rem 1rem;
+  outline: none;
+  border: none;
+  transition: 0.2s all ease-in-out;
+}
+
+.content__localeButtons__button__active {
+  background-color: #66c;
+  color: #fff;
+}

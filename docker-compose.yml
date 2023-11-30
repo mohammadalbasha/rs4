@@ -1,0 +1,29 @@
+version: "3"
+
+services:
+  back-end:
+    build:
+      context: rs4-server
+    container_name: back-end
+    working_dir: /usr/src/app
+    ports:
+      - "8080:8080"
+    env_file:
+      - .env
+
+    depends_on:
+      - postgres
+
+  front-end:
+    build:
+      context: rs4-client
+    container_name: front-end
+    ports:
+      - "3000:3000"
+
+  postgres:
+    image: postgres
+    container_name: postgres
+    restart: always
+    ports:
+      - "5432:5432"

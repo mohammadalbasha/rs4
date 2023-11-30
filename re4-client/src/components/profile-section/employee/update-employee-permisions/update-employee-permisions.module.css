@@ -1,0 +1,132 @@
+.updateEmployeePermisions {
+  display: none;
+  position: fixed;
+  top: 5vh;
+  width: 90vw;
+  left: 5vw;
+  min-width: 380px;
+  z-index: 10;
+  background-color: white;
+  border: 1px solid rgb(140, 140, 142);
+  box-shadow: 1px 0px 16px 1px rgb(194, 194, 195);
+  border-radius: 5px;
+}
+
+.active {
+  display: block;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem;
+  color: #66c;
+  border-bottom: 1px solid rgb(199, 199, 202);
+}
+.header__updateEmployeePermisions {
+  color: #66c;
+  vertical-align: middle;
+}
+.header__updateEmployeePermisions:hover {
+  cursor: pointer;
+  color: rgb(74, 74, 76);
+}
+.header__span {
+  vertical-align: middle;
+  color: rgb(74, 74, 76);
+}
+
+@media (min-width: 756px) {
+  .updateEmployeePermisions {
+    width: 50vw;
+    left: 25vw;
+  }
+}
+
+.content {
+  text-align: center;
+  overflow-y: scroll;
+  height: 70vh;
+}
+
+.content__heading {
+  color: white;
+  background: #66c;
+  padding: 15px 5px;
+  text-align: center;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.updateEmployeePermisions__fieldsItems {
+  display: flex;
+  flex-direction: column;
+}
+
+.updateEmployeePermisions__fieldsItems__fieldItem {
+  width: 25%;
+  padding: 2rem 2rem;
+}
+
+@media (min-width: 748px) {
+  .updateEmployeePermisions__fieldsItems {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.content__inputField {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 1rem;
+}
+.content__inputField__spans {
+  font-size: 0.8rem;
+}
+.content__inputField__spans__span {
+  margin: 0.5rem;
+  vertical-align: middle;
+}
+
+.content__textInput {
+  width: 100%;
+  margin-top: 0.2rem;
+  height: 2.6rem;
+  border-radius: 5px;
+  border: 1px solid #66c;
+  font-size: 1rem;
+  color: rgb(143, 143, 145);
+  box-shadow: 8px 0px 16px 4px rgba(131, 120, 120, 0.2);
+  text-align: right;
+  padding: 1rem;
+}
+.content__textInput:focus {
+  box-shadow: 0px 0px 16px 4px rgb(176, 176, 237);
+  outline: none;
+}
+
+.content__submitButton {
+  margin-top: 2rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  background-color: hsl(0, 0%, 96%);
+  border-top: 0.1px solid rgb(199, 199, 202);
+}
+
+.content__submitButton__button {
+  margin-right: 1rem;
+  padding: 1rem 2rem;
+  outline: none;
+  border: none;
+  background-color: #66c;
+  color: white;
+}
+.content__submitButton__button:hover {
+  opacity: 0.8;
+}
+
+.content__submitButton__button:disabled {
+  opacity: 0.5;
+}

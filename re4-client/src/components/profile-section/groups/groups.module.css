@@ -1,0 +1,40 @@
+.groups {
+  margin: auto;
+  margin-top: 3rem;
+  width: 80vw;
+  min-width: 380px;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.isLoading {
+  opacity: 0.5;
+}
+
+.toolkit {
+  text-align: right;
+  height: 3rem;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  cursor: pointer;
+}
+.toolkit__add {
+  color: #66c;
+}
+
+.toolkit__add__icon {
+  vertical-align: middle;
+  color: #66c;
+}
+.toolkit__add__icon:hover {
+  cursor: pointer;
+  color: rgb(74, 74, 76);
+}
+.toolkit__add__span {
+  vertical-align: middle;
+  color: #66c;
+}

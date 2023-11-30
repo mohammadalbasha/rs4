@@ -1,0 +1,113 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model CentralUser {
+  id             Int      @id @default(autoincrement())
+  is_super_admin Boolean  @default(false)
+  name           String?  @db.VarChar(50)
+  email          String   @unique
+  password       String   @db.VarChar(100)
+  isActive       Boolean  @default(true)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @default(now()) @updatedAt()
+
+  permisions Permision[]
+}
+
+enum Locale {
+  en
+  ar
+}
+
+model Surname {
+  id         Int         @id @default(autoincrement())
+  isActive   Boolean     @default(true)
+  createdAt  DateTime    @default(now())
+  updatedAt  DateTime    @default(now()) @updatedAt()
+  surname    String      @unique() @db.VarChar(100)
+  locale     Locale      @default(ar)
+  attentions Attention[]
+}
+
+model Group {
+  id         Int         @id @default(autoincrement())
+  isActive   Boolean     @default(true)
+  createdAt  DateTime    @default(now())
+  updatedAt  DateTime    @default(now()) @updatedAt()
+  group      String      @unique() @db.VarChar(100)
+  color      String      @db.VarChar(100)
+  attentions Attention[]
+}
+
+model Permision {
+  id        Int      @id @default(autoincrement())
+  name      String?  @db.VarChar(50)
+  action    String   @db.VarChar(50)
+  subject   String   @db.VarChar(100)
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now()) @updatedAt()
+
+  users CentralUser[]
+}
+
+enum PrimarySurname {
+  ma3ali
+  sa3adt
+  mr
+  your_excellency
+}
+
+model Attention {
+  id                 Int            @id @default(autoincrement())
+  isActive           Boolean        @default(true)
+  createdAt          DateTime       @default(now())
+  updatedAt          DateTime       @default(now()) @updatedAt()
+  primarySurname     PrimarySurname @default(ma3ali)
+  secondarySurnameId Int
+  secondarySurname   Surname        @relation(fields: [secondarySurnameId], references: [id])
+  fullName           String         @db.VarChar(100)
+  email              String
+  // alternativeEmails  Json
+  alternativeEmails  String
+
+  entity             String
+  whatsappNumber     String
+  position           String
+  groupId            Int
+  group              Group   @relation(fields: [groupId], references: [id])
+  locale             Locale
+  sendEmail          Boolean @default(true)
+  sendWhatsapp       Boolean @default(false)
+  attendConfirmation Boolean @default(false)
+  serial             String  @default("")
+}
+
+// model Document {
+//   id             Int            @id @default(autoincrement())
+//   isActive       Boolean        @default(true)
+//   createdAt      DateTime       @default(now())
+//   updatedAt      DateTime       @default(now()) @updatedAt()
+//   status         DocumentStatus @default(new)
+//   userType       UserType       @default(seller)
+//   isMandatory    Boolean        @default(false)
+//   documentTypeId Int
+//   documentType   DocumentType   @relation(fields: [documentTypeId], references: [id])
+//   userId         Int
+//   user           User           @relation(fields: [userId], references: [id])
+//   centralNotes   String?
+//   userNotes      String?
+
+//   mediaFileId Int? // @unique
+//   mediaFile   MediaFile? @relation(fields: [mediaFileId], references: [id])
+//   // fileId
+// }

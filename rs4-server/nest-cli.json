@@ -1,0 +1,15 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "assets": [
+      { "include": "shared/mail/templates/**/*.hbs", "watchAssets": true },
+      {
+        "include": "shared/mail/partials/**/*.hbs",
+        "watchAssets": true
+      },
+      { "include": "shared/i18n/**/*", "watchAssets": true }
+    ]
+  }
+}

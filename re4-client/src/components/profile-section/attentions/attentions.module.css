@@ -1,0 +1,101 @@
+.attentions {
+  margin: auto;
+  margin-top: 3rem;
+  width: 80vw;
+  min-width: 380px;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.isLoading {
+  opacity: 0.5;
+}
+.toolkit {
+  text-align: right;
+  height: 3rem;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  cursor: pointer;
+}
+.toolkit__add {
+  color: #66c;
+}
+
+.toolkit__add__icon {
+  vertical-align: middle;
+  color: #66c;
+}
+.toolkit__add__span {
+  vertical-align: middle;
+  color: #66c;
+}
+
+.toolkit__add__icon:hover {
+  cursor: pointer;
+  color: rgb(74, 74, 76);
+}
+
+.filters {
+  background-color: #f0f9fd;
+  padding: 20px;
+  border: 1px solid #c5e7f7;
+}
+.filters__toolkit {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 748px) {
+  .filters__toolkit {
+    flex-direction: row;
+  }
+}
+
+.filters__toolkit__search,
+.filters__toolkit__empty {
+  text-align: right;
+}
+.filters__toolkit__search {
+  color: #666;
+}
+.filters__toolkit__empty {
+  color: #66c;
+  cursor: pointer;
+}
+
+.filters__fieldsItems {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 748px) {
+  .filters__toolkit__search,
+  .filters__toolkit__empty {
+    width: 50%;
+  }
+  .filters__fieldsItems {
+    flex-direction: row-reverse;
+  }
+}
+
+.filters__go {
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.filters__go__button {
+  padding: 0.7rem 1.4rem;
+  background-color: rgb(8, 146, 8);
+  color: white;
+  border-radius: 10px;
+}
+.filters__go__button:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
