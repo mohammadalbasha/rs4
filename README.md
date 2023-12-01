@@ -21,7 +21,7 @@ visit http://localhost:3000
 
 ## Environemnt variables
 
-they should be added to the .env file as described in the env tepmlate
+they should be added to the .env file as described in the env template
 
 ## Technlogies
 
