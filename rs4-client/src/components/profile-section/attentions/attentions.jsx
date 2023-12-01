@@ -165,7 +165,7 @@ export function Attentions() {
     );
   }, [selectedPage, selectedItemsCount, showAddModal, isDeleting, reRender]);
 
-  const pageCounts = Math.floor(itemsCount / selectedItemsCount);
+  const pageCounts = Math.ceil(itemsCount / selectedItemsCount);
 
   // eport as an excel
 

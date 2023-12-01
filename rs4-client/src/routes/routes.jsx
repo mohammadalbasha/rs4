@@ -23,6 +23,7 @@ export const router = createBrowserRouter([
             <img
              
              src="https://hstp-events.com/templates/jl_balder_pro/custom/images/logo.png"
+             style={{width:"100%", maxWidth:"800px"}}
            />
             </div>
 
